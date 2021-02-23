@@ -20,7 +20,7 @@ public class Petle
         //Napisz pętle, która wypisze ciąg fibonacciego o długości X
         //(gdzie x jest zdefinowana zmienną)
         int a = 0, b = 1, c, x = 10;
-        for (int i = 1; i<x; i++){
+        for (int i = 0; i<x; i++){
             c = a + b;
             a = b;
             b = c;
