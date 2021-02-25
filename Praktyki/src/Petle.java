@@ -1,6 +1,7 @@
+import java.util.Scanner;
+
 public class Petle
 {
-
     public static void main (String[] args) {
         //Zadanie 1
         //Napisz pętle, która wypisze znaki(A-Z) z tabeli ASCII.
@@ -16,18 +17,23 @@ public class Petle
         System.out.println(" ");
 
 
+
         //Zadanie 2
         //Napisz pętle, która wypisze ciąg fibonacciego o długości X
         //(gdzie x jest zdefinowana zmienną)
-        int a = 0, b = 1, c, x = 10;
-        for (int i = 0; i<x; i++){
+
+        int a, b, c;
+        a=b=1;
+        int numberOfCalculations = 10;
+        System.out.print(a + "\t" + b + "\t");
+        for (int i = 0; i<numberOfCalculations; i++){
             c = a + b;
             a = b;
             b = c;
-            System.out.print(c + " ");
+            System.out.print(c + "\t");
 
         }
-
+        System.out.println("");
     }
 
 }
