@@ -44,7 +44,7 @@ public class arrays {
             double numA;
             double numB;
             for(int k = 0; k < power.length/2;k++){
-                    numA = power[k]; // 0
+                    numA = power[k];
                     numB = power[power.length - 1 - k];
                     power[k] = numB;
                     power[power.length - 1 - k] = numA;
