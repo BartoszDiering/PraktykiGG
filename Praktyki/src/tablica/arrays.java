@@ -7,57 +7,55 @@ public class arrays {
     public static void main(String[] args) {
 
             //Przykład 5
-            double[] power = {23.45, -2.22, 45.90, 67.45, -56, 234.11, -34.8, 90.4, -77};
-            System.out.println("Element [0] = " + power[0]);
-            System.out.println("Element [1] = " + power[1]);
-            System.out.println("Element [2] = " + power[2]);
-            System.out.println("Element [3] = " + power[3]);
-            System.out.println("Element [4] = " + power[4]);
-            System.out.println("Element [5] = " + power[5]);
-            System.out.println("Element [6] = " + power[6]);
-            System.out.println("Element [7] = " + power[7]);
-            System.out.println("Element [8] = " + power[8]);
+            double[] power = {23.45, -2.22, 45.90, 67.45, -56, 234.11,-34.8, 90.4, -77};
+            double min = power[0];
+            double max = power[0];
+            int min2 = 0;
+            int max2 = 0;
+            for(int i = 0; i < 9; i++)
+            {
+                    if(max < power[i])
+                    {
+                            max = power[i];
+                            max2 = i;
+                    }
+                    if(min > power[i])
+                    {
+                            min = power[i];
+                            min2 = i;
+                    }
+                    System.out.println("element [" + i + "] = " + power[i]);
+            }
+            power[max2] = min;
+            power[min2] = max;
             System.out.println();
-            System.out.println("Po zamianie liczb najwiewksza z najmniejsza miejscami: ");
+            System.out.println("Po zamianie liczb najwieksza z najmniejsza miejscami");
             System.out.println();
-            System.out.println("Element [0] = " + power[0]);
-            System.out.println("Element [1] = " + power[1]);
-            System.out.println("Element [2] = " + power[2]);
-            System.out.println("Element [3] = " + power[3]);
-            System.out.println("Element [4] = " + power[4]);
-            System.out.println("Element [5] = " + power[8]);
-            System.out.println("Element [6] = " + power[6]);
-            System.out.println("Element [7] = " + power[7]);
-            System.out.println("Element [8] = " + power[5]);
+            for( int j = 0; j < 9; j++)
+            {
+                    System.out.println("element [" + j + "] = " + power[j]);
+            }
+            System.out.println();
 
             //Przykład 6
             //(Odwrócenie Tablicy z PRZYKŁAD 5 )
-            System.out.println("Przykład 6");
-            System.out.println("Element [0] = " + power[0]);
-            System.out.println("Element [1] = " + power[1]);
-            System.out.println("Element [2] = " + power[2]);
-            System.out.println("Element [3] = " + power[3]);
-            System.out.println("Element [4] = " + power[4]);
-            System.out.println("Element [5] = " + power[8]);
-            System.out.println("Element [6] = " + power[6]);
-            System.out.println("Element [7] = " + power[7]);
-            System.out.println("Element [8] = " + power[5]);
-            System.out.println();
-            System.out.println("PO ODWROCENIU: ");
-            System.out.println();
-            System.out.println("Element [0] = " + power[5]);
-            System.out.println("Element [1] = " + power[7]);
-            System.out.println("Element [2] = " + power[6]);
-            System.out.println("Element [3] = " + power[8]);
-            System.out.println("Element [4] = " + power[4]);
-            System.out.println("Element [5] = " + power[3]);
-            System.out.println("Element [6] = " + power[2]);
-            System.out.println("Element [7] = " + power[1]);
-            System.out.println("Element [8] = " + power[0]);
+
+            System.out.println("Odwrócenie tablicy\n");
+            double numA;
+            double numB;
+            for(int k = 0; k < power.length/2;k++){
+                    numA = power[k]; // 0
+                    numB = power[power.length - 1 - k];
+                    power[k] = numB;
+                    power[power.length - 1 - k] = numA;
+            }
+            for(int k = 0; k < power.length; k++){
+                    System.out.println("El [" + k + "] = " + power[k]);
+            }
+
         //Przykład 7
         //(Losowanie 2-óch liczb z tablicy PRZYKŁAD 5 i porównanie ich na koniec(>,==,<))
             System.out.println();
-            System.out.println("Przykład 7 \n");
             Random random = new Random();
             int wylosowanaliczba;
             wylosowanaliczba= random.nextInt(power.length);
