@@ -36,8 +36,8 @@ public class Main {
         //Zadanie 4
         ProstyKalkulator prostykalkulator = new ProstyKalkulator(6, 2);
         Scanner sc = new Scanner(System.in);
-        boolean dziala = true;
-        while (dziala) {
+        boolean dzialaprogram = true;
+        while (dzialaprogram) {
             System.out.println("dodawanie[1]");
             System.out.println("odejmowanie[2]");
             System.out.println("mnożenie[3]");
@@ -73,7 +73,7 @@ public class Main {
                     break;
                 }
                 case "5": {
-                    dziala = false;
+                    dzialaprogram = false;
                     break;
                 }
                 default: {
