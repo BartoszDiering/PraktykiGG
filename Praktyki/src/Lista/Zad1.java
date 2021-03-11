@@ -6,23 +6,22 @@ import java.util.Scanner;
 
 public class Zad1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<String> array = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            String x = scanner.nextLine();
-            boolean a = false;
-            for (String s : array) {
-                if (s.equals(x)) {
-                    a = true;
-                    break;
-                }
+        List<String> lista = new ArrayList<>(100);
+        Scanner sc = new Scanner(System.in);
+        String a;
+        for(int i=0;i< 10;i++)
+        {
+            System.out.print("Dla elementu "+i+" przypiszesz wartość = ");
+            a=sc.next();
+
+            if (!lista.contains(a)){
+                lista.add(i,a);
             }
-            if (!a) {
-                array.add(x);
-            } else {
-                System.out.println("Liczba już się powtórzyła!");
+            else if (lista.contains(a)){
+                i=i-1;
             }
-            System.out.println("Dla elementu [" + i + "] przypisałeś wartość " + array.get(i));
         }
+        System.out.println(lista);
+
     }
 }
